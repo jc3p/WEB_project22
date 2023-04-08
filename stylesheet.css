@@ -96,7 +96,7 @@ body {font-family: "Prompt", sans-serif;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      flex-direction: column;
+      flex-direction: row;
       align-content: center;
     }
 
