@@ -96,19 +96,14 @@ body {font-family: "Prompt", sans-serif;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      flex-direction: row;
+      flex-direction: column;
       align-content: center;
     }
 
 .item {
       flex-basis: 100px;
       padding-top: 20px;
-    }
-
-.item bl {
-      flex-basis: 100px;
-      padding-top: 40px;
-      align-items: end;
+      height: auto;
     }
 
 
