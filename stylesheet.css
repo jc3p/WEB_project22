@@ -103,12 +103,7 @@ body {font-family: "Prompt", sans-serif;
 .item {
       flex-basis: 100px;
       padding-top: 20px;
-    }
-
-.item bl {
-      flex-basis: 100px;
-      padding-top: 40px;
-      align-items: end;
+      height: auto;
     }
 
 
@@ -122,7 +117,7 @@ body {font-family: "Prompt", sans-serif;
   }
   
   .items1 {
-    max-width: 250px;
+    max-width: 300px;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
