@@ -1,3 +1,46 @@
+body {font-family: "Prompt", sans-serif;
+    background-color: rgba(13, 68, 36);
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  footer {
+    color: rgb(143, 235, 189);
+    background-color: rgba(13, 68, 36);
+    
+  }
+
+  ul.topnav {
+    list-style-type: none;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(13, 68, 36);
+  }
+  
+  ul.topnav li {float: right;}
+  
+  ul.topnav li a {
+    display: block;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    text-emphasis: strong;
+    padding: 25px 25px;
+    text-decoration: none;
+  }
+  
+  ul.topnav li a:hover {color: rgb(143, 235, 189);}
+  
+  
+  ul.topnav li.logo {
+    float: left;
+    z-index: 1;
+  }
+  
+
+
 img {
    vertical-align: middle;
 }
@@ -108,47 +151,7 @@ body {
 
 
 
-body {font-family: "Prompt", sans-serif;
-    background-color: rgba(13, 68, 36);
-    margin: 0px;
-    padding: 0px;
-  }
-  
-  footer {
-    color: rgb(143, 235, 189);
-    background-color: rgba(13, 68, 36);
-    
-  }
 
-  ul.topnav {
-    list-style-type: none;
-    height: auto;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: rgba(13, 68, 36);
-  }
-  
-  ul.topnav li {float: right;}
-  
-  ul.topnav li a {
-    display: block;
-    color: white;
-    font-size: 24px;
-    text-align: center;
-    text-emphasis: strong;
-    padding: 25px 25px;
-    text-decoration: none;
-  }
-  
-  ul.topnav li a:hover {color: rgb(143, 235, 189);}
-  
-  
-  ul.topnav li.logo {
-    float: left;
-    z-index: 1;
-  }
-  
 
 
   .dropbtn {
