@@ -125,3 +125,11 @@ body {font-family: "Prompt", sans-serif;
     font-size: 12px;
     box-align: center;
   }
+
+#FAQ_title {
+  color: rgba(13, 68, 36);
+}
+
+#Contact_title {
+  color: rgba(13, 68, 36)
+}
