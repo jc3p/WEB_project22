@@ -12,6 +12,7 @@ body {font-family: "Prompt", sans-serif;
 
 .social {
     display: grid;
+    padding-top: 3px;
 }
 
   ul.topnav {
