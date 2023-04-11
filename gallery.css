@@ -10,6 +10,8 @@ body {
   padding: 0px;
 }
 
+
+
 footer {
   color: rgb(143, 235, 189);
   background-color: rgba(13, 68, 36);
@@ -157,10 +159,6 @@ color: rgba(13, 68, 36)
 }
 
 
-img {
-  max-width: 100%;
-  height: auto;
-}
 
 button {
   background: none;
@@ -187,100 +185,48 @@ body {
 
 .synch-carousels {
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  place-items: center;
+  overflow: hidden; 
 }
 
-.synch-carousels > * {
+.slide {
   width: 100%;
+  max-width: 800px;
+  height: 350px;
+  position: absolute;
+  transition: all 0.5s;
 }
 
-.synch-carousels .right {
-  order: -1;
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.synch-carousels .left {
-  overflow: hidden;
-}
-
-.synch-carousels .gallery {
-  display: none;
-}
-
-.synch-carousels .slick-slide {
-  outline: none;
-}
-
-.synch-carousels .slick-vertical .slick-slide {
+.btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
   border: none;
-}
-
-.synch-carousels .gallery .slick-list {
-  height: auto !important;
-  margin: 0 -20px;
-}
-
-.synch-carousels .gallery .slick-slide {
+  border-radius: 50%;
+  z-index: 10px;
   cursor: pointer;
+  background-color: #fff;
+  font-size: 18px;
 }
 
-.synch-carousels .gallery .slick-slide {
-  margin: 0 20px;
+.btn:active {
+  transform: scale(1.1);
 }
 
-.synch-carousels .nav-arrows {
-  display: flex;
-  position: absolute;
-  bottom: -50px;
-  left: 50%;
-  transform: translateX(-50%);
+.btn-prev {
+  top: 45%;
+  left: 2%;
 }
 
-.synch-carousels .nav-arrows svg {
-  fill: white;
-}
-
-.synch-carousels .arrow-left {
-  margin-right: 35px;
-}
-
-.synch-carousels .photos-counter {
-  position: absolute;
-  top: 10px;
-  right: 0;
-  padding: 0 20px;
-  color: white;
-  background: #292929;
-}
-
-@media screen and (min-width: 480px) {
-  .synch-carousels .right {
-    margin-bottom: 20px;
-  }
-
-  .synch-carousels .gallery {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .synch-carousels .right {
-    position: relative;
-    width: calc(100% - 230px);
-    margin-bottom: 0;
-    order: 2;
-  }
-
-  .synch-carousels .left {
-    width: 210px;
-  }
-
-  .synch-carousels .gallery .slick-slide {
-    margin: 0 0 20px 0;
-  }
-
-  .synch-carousels .gallery .slick-list {
-    margin: 0;
-  }
+.btn-next {
+  top: 45%;
+  right: 2%;
 }
