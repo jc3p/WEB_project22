@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  position: center;
+}
+
 body {font-family: "Prompt", sans-serif;
   background-color: rgba(13, 68, 36);
   margin: 0px;
@@ -8,6 +13,16 @@ footer {
   color: rgb(143, 235, 189);
   background-color: rgba(13, 68, 36);
   
+}
+
+.logo {
+  float: left;
+  padding: 80px;
+}
+
+.social {
+  display: grid;
+  padding-top: 15px;
 }
 
 ul.topnav {
@@ -45,10 +60,6 @@ img {
  vertical-align: middle;
 }
 
-* {
-  box-sizing: border-box;
-  position: center;
-}
 
 /* Position the image container (needed to position the left and right arrows) */
 .galleryContainer {
@@ -137,16 +148,6 @@ img {
 }
 
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto", sans-serif;
-}
-
-.logo {
-  float: left;
-  padding: 80px;
-}
 
 .dropbtn {
   float: right;
