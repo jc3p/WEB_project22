@@ -4,7 +4,7 @@ body {font-family: "Prompt", sans-serif;
     padding: 0px;
   }
   
-  footer {
+footer {
     color: rgb(143, 235, 189);
     background-color: rgba(13, 68, 36);
     
@@ -16,6 +16,7 @@ body {font-family: "Prompt", sans-serif;
 }
 
   ul.topnav {
+    font-family: "Prompt", sans-serif;
     list-style-type: none;
     height: auto;
     margin: 0;
