@@ -1,10 +1,12 @@
-body {font-family: "Prompt", sans-serif;
+body {
+    font-family: "Prompt", sans-serif;
+    font-weight: bold;
     background-color: rgba(13, 68, 36);
     margin: 0px;
     padding: 0px;
   }
   
-  footer {
+footer {
     color: rgb(143, 235, 189);
     background-color: rgba(13, 68, 36);
     
@@ -16,10 +18,12 @@ body {font-family: "Prompt", sans-serif;
 }
 
   ul.topnav {
+    font-family: "Prompt", sans-serif;
+    font-weight: bold;
     list-style-type: none;
     height: auto;
     margin: 0;
-    padding: 0;
+    padding-top: 20px;
     overflow: hidden;
     background-color: rgba(13, 68, 36);
   }
@@ -47,6 +51,8 @@ body {font-family: "Prompt", sans-serif;
 
 
   .dropbtn {
+    font-family: "Prompt", sans-serif;
+    font-weight: bold;
     float: right;
     color: white;
     background-color: transparent;
@@ -113,7 +119,10 @@ body {font-family: "Prompt", sans-serif;
 
 
 .h2a {
+  font-family: "Prompt", sans-serif;
+  font-weight: bold;
   text-align: center;
+  padding: 10px;
 }
 .containers1 {
     display: flex;
