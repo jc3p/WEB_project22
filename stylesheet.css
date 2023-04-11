@@ -23,7 +23,7 @@ footer {
     list-style-type: none;
     height: auto;
     margin: 0;
-    padding: 0px;
+    padding-top: 20px;
     overflow: hidden;
     background-color: rgba(13, 68, 36);
   }
