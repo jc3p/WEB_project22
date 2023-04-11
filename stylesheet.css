@@ -122,6 +122,7 @@ footer {
   font-family: "Prompt", sans-serif;
   font-weight: bold;
   text-align: center;
+  padding: 10px;
 }
 .containers1 {
     display: flex;
