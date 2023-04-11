@@ -1,4 +1,5 @@
 
+
   /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function myFunction() {
@@ -20,49 +21,31 @@ window.onclick = function(event) {
 }
 
 
+let slideIndex = 1;
+showSlides(slideIndex);
 
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-
-
-// Select all slides
-const slides = document.querySelectorAll(".slide");
-
-// loop through slides and set each slides translateX property to index * 100% 
-slides.forEach((slide, indx) => {
-  slide.style.transform = `translateX(${indx * 100}%)`;
-});
-
-// current slide counter
-let curSlide = 0;
-
-// select next slide button
-const nextSlide = document.querySelector(".btn-next");
-
-// maximum number of slides
-let maxSlide = slides.length - 1;
-
-// add event listener and navigation functionality
-nextSlide.addEventListener("click", function () {
-
-  // check if current slide is the last and reset current slide
-  if (curSlide === maxSlide) {
-    curSlide = 0;
-  } else {
-    curSlide++;
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none"; 
   }
-
-//   move slide by -100%
-  slides.forEach((slide, indx) => {
-    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-  });
-});
-
-// add event listener and next slide functionality
-nextSlide.addEventListener("click", function () {
-     curSlide++;
-
-  slides.forEach((slide, indx) => {
-    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-  });
-});
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
