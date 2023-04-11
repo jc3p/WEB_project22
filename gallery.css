@@ -58,8 +58,6 @@ ul.topnav li.logo {
 }
 
 
-* {box-sizing:border-box}
-
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
@@ -206,7 +204,7 @@ ul.topnav li.logo {
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
   .show {display:block;}
   
-.container {
+  .container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -222,7 +220,10 @@ ul.topnav li.logo {
 
 
 .h2a {
+font-family: "Prompt", sans-serif;
+font-weight: bold;
 text-align: center;
+padding: 10px;
 }
 .containers1 {
   display: flex;
