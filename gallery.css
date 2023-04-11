@@ -55,18 +55,13 @@ ul.topnav li.logo {
 }
 
 
-
-img {
- vertical-align: middle;
-}
-
-
 /* Position the image container (needed to position the left and right arrows) */
 .galleryContainer {
-  position: relative;
-  display: block;
-  width: 900px;
-
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
 }
 
 /* Hide the images by default */
