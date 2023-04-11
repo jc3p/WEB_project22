@@ -21,82 +21,48 @@ window.onclick = function(event) {
 
 
 
-const $left = $(".left");
-const $gl = $(".gallery");
-const $gl2 = $(".gallery2");
-const $photosCounterFirstSpan = $(".photos-counter span:nth-child(1)");
 
-$gl2.on("init", (event, slick) => {
-  $photosCounterFirstSpan.text(`${slick.currentSlide + 1}/`);
-  $(".photos-counter span:nth-child(2)").text(slick.slideCount);
+
+
+
+// Select all slides
+const slides = document.querySelectorAll(".slide");
+
+// loop through slides and set each slides translateX property to index * 100% 
+slides.forEach((slide, indx) => {
+  slide.style.transform = `translateX(${indx * 100}%)`;
 });
 
-$gl.slick({
-  rows: 0,
-  slidesToShow: 2,
-  arrows: false,
-  draggable: false,
-  useTransform: false,
-  mobileFirst: true,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 3
-      }
-    },
-    {
-      breakpoint: 1023,
-      settings: {
-        slidesToShow: 1,
-        vertical: true
-      }
-    }
-  ]
-});
+// current slide counter
+let curSlide = 0;
 
-$gl2.slick({
-  rows: 0,
-  useTransform: false,
-  prevArrow: ".arrow-left",
-  nextArrow: ".arrow-right",
-  fade: true,
-  asNavFor: $gl
-});
+// select next slide button
+const nextSlide = document.querySelector(".btn-next");
 
-function handleCarouselsHeight() {
-  if (window.matchMedia("(min-width: 1024px)").matches) {
-    const gl2H = $(".gallery2").height();
-    $left.css("height", gl2H);
+// maximum number of slides
+let maxSlide = slides.length - 1;
+
+// add event listener and navigation functionality
+nextSlide.addEventListener("click", function () {
+
+  // check if current slide is the last and reset current slide
+  if (curSlide === maxSlide) {
+    curSlide = 0;
   } else {
-    $left.css("height", "auto");
+    curSlide++;
   }
-}
 
-$(window).on("load", () => {
-  handleCarouselsHeight();
-  setTimeout(() => {
-    $(".loading").fadeOut();
-    $("body").addClass("over-visible");
-  }, 300);
+//   move slide by -100%
+  slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  });
 });
 
-$(window).on(
-  "resize",
-  _.debounce(() => {
-    handleCarouselsHeight();
-    /*You might need this code in your projects*/
-    //$gl1.slick("resize");
-    //$gl2.slick("resize");
-  }, 200)
-);
+// add event listener and next slide functionality
+nextSlide.addEventListener("click", function () {
+     curSlide++;
 
-$(".gallery .item").on("click", function() {
-  const index = $(this).attr("data-slick-index");
-  $gl2.slick("slickGoTo", index);
+  slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  });
 });
-
-$gl2.on("afterChange", (event, slick, currentSlide) => {
-  $photosCounterFirstSpan.text(`${slick.currentSlide + 1}/`);
-});
-
