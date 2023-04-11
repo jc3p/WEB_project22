@@ -50,6 +50,8 @@ footer {
 
 
   .dropbtn {
+    font-family: "Prompt", sans-serif;
+    font-weight: bold;
     float: right;
     color: white;
     background-color: transparent;
