@@ -1,4 +1,5 @@
 
+
   /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function myFunction() {
@@ -19,31 +20,32 @@ window.onclick = function(event) {
   }
 }
 
-var slidePosition = 1;
-SlideShow(slidePosition);
 
-// forward/Back controls
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
 function plusSlides(n) {
-  SlideShow(slidePosition += n);
+  showSlides(slideIndex += n);
 }
 
-//  images controls
+// Thumbnail image controls
 function currentSlide(n) {
-  SlideShow(slidePosition = n);
+  showSlides(slideIndex = n);
 }
 
-function SlideShow(n) {
-  var i;
-  var slides = document.getElementsByClassName("Containers");
-  var circles = document.getElementsByClassName("dots");
-  if (n > slides.length) {slidePosition = 1}
-  if (n < 1) {slidePosition = slides.length}
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+    slides[i].style.display = "none"; 
   }
-  for (i = 0; i < circles.length; i++) {
-      circles[i].className = circles[i].className.replace(" enable", "");
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slidePosition-1].style.display = "block";
-  circles[slidePosition-1].className += " enable";
-} 
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
