@@ -18,10 +18,11 @@ footer {
 
   ul.topnav {
     font-family: "Prompt", sans-serif;
+    font-weight: bold;
     list-style-type: none;
     height: auto;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     overflow: hidden;
     background-color: rgba(13, 68, 36);
   }
